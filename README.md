@@ -1,6 +1,6 @@
-# DeepEIC: Official PyTorch Implementation
+# DeepELIC: Official PyTorch Implementation
 
-This repository contains the official PyTorch implementation for the paper **DeepEIC**.
+This repository contains the official PyTorch implementation for the paper **DeepELIC**.
 
 > **📢 Notice:** The pre-trained checkpoints and models will be made publicly available immediately upon the acceptance of the paper.
 
@@ -20,7 +20,7 @@ Ensure your environment meets the following requirements:
 
 ### 1. Training
 
-To train the DeepEIC model from scratch, use the `train.py` script. You need to specify the paths for the training and testing datasets, as well as an experiment name.
+To train the DeepELIC model from scratch, use the `train.py` script. You need to specify the paths for the training and testing datasets, as well as an experiment name.
 
 ```bash
 python train.py -d /path/to/train_dataset -d_test /path/to/test_dataset -exp my_experiment --cuda
