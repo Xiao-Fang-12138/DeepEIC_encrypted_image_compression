@@ -39,7 +39,7 @@ The implementation is self-contained and pure PyTorch: it only depends on `torch
 - **Interpretable by construction** — the network maintains a strict mathematical correspondence with the CS-EIC algorithm, so each module can be traced back to one step of the optimizer.
 - **Integrated reconstruction** — decryption and decompression are performed jointly inside every JDD stage, instead of decrypting first and decompressing afterwards.
 - **Efficient encrypted-domain compression** — 2D block compressive sensing is used for sampling, which is cheaper than 1D-CS and non-uniform downsampling based schemes.
-- **Released weights** — nine pretrained checkpoints covering the main ratios (1/4, 1/9, 1/16) and six additional ratios from 0.20 to 0.70.
+- **Released weights** — nine pretrained checkpoints (downloadable from Google Drive) covering the main ratios (1/4, 1/9, 1/16) and six additional ratios from 0.20 to 0.70.
 
 ## Contents
 
@@ -64,6 +64,8 @@ python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 python -m pip install -r requirements.txt
 ```
+
+Download the nine pretrained weights from [Google Drive](https://drive.google.com/drive/folders/1RUgWUbHyX_Q2w8QSZEqb6VOzQ4SRJg41), create a `checkpoints/` directory in the repository root and put the `.pth` files inside it (see [Pretrained Checkpoints](#pretrained-checkpoints)).
 
 Everything runs directly from the repository root, so no build step or package installation is needed. Use `--device cpu`, `--device cuda`, or the default `--device auto`, which selects CUDA when available.
 
@@ -129,7 +131,7 @@ python -m training.train   --config configs/cr_40.json --device cuda
 
 ## Pretrained Checkpoints
 
-Nine checkpoints are released in `checkpoints/`. A checkpoint is loaded strictly (`strict=True`) and its stored architecture metadata must match the selected configuration; changing `model.subrate` without switching to the corresponding checkpoint is invalid.
+Download the nine checkpoints from [Google Drive](https://drive.google.com/drive/folders/1RUgWUbHyX_Q2w8QSZEqb6VOzQ4SRJg41), create a `checkpoints/` directory in the repository root, and put the `.pth` files there. A checkpoint is loaded strictly (`strict=True`) and its stored architecture metadata must match the selected configuration; changing `model.subrate` without switching to the corresponding checkpoint is invalid.
 
 | Task | Nominal measurement ratio | Enc. channels | Configuration | Weights |
 |---|---|---:|---|---|
@@ -150,7 +152,7 @@ All models use block size 16, five JDD stages and three residual blocks per stag
 ```text
 DeepELIC/
 ├── assets/           # Architecture figure
-├── checkpoints/      # Nine released pretrained weights (*.pth)
+├── checkpoints/      # Create it yourself; put the downloaded weights (*.pth) here
 ├── configs/          # Model and training configuration (9 JSON files)
 ├── network/          # DeepELIC model, GRP/NPT encryption, dataset and runtime utilities
 ├── testing/          # Quantized evaluation entry point and task launchers
