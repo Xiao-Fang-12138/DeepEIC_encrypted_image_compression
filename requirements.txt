@@ -1,0 +1,7 @@
+# Verified environment: Python 3.12; Python 3.10-3.12 supported.
+# DeepELIC requires only these five packages; no compiled extensions are needed.
+torch==2.2.2
+torchvision==0.17.2
+numpy==1.26.4
+Pillow==10.4.0
+torchmetrics==1.4.3

@@ -1,0 +1,25 @@
+{
+  "task": "cr_50",
+  "model": {
+    "subrate": 0.5,
+    "block_size": 16,
+    "stages": 5,
+    "num_blocks": 3
+  },
+  "checkpoint": "checkpoints/deepelic_cr_50.pth",
+  "evaluation": {
+    "crop": 0,
+    "padding_multiple": 64
+  },
+  "training": {
+    "max_steps": 5000000,
+    "batch_size": 16,
+    "patch_size": 256,
+    "learning_rate": 0.0001,
+    "weight_decay": 1e-08,
+    "lr_step": 2000,
+    "lr_gamma": 0.8,
+    "val_every": 2000,
+    "save_every": 2000
+  }
+}

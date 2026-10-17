@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this code or the pretrained weights, please cite the following paper."
+type: article
+title: "DeepELIC: Deep encrypted lossy image compression network via compressive sensing unfolding"
+authors:
+  - family-names: Gao
+    given-names: Fangyuan
+  - family-names: Deng
+    given-names: Yufan
+  - family-names: Deng
+    given-names: Xin
+  - family-names: Guan
+    given-names: Zhenyu
+  - family-names: Xu
+    given-names: Mai
+journal: Pattern Recognition
+volume: 180
+start: 114311
+year: 2026
+doi: 10.1016/j.patcog.2026.114311
+url: "https://doi.org/10.1016/j.patcog.2026.114311"
+repository-code: "https://github.com/Xiao-Fang-12138/DeepEIC_encrypted_image_compression"
+keywords:
+  - encrypted image compression
+  - encrypt-then-compress
+  - compressive sensing
+  - deep unfolding
+license: MIT
