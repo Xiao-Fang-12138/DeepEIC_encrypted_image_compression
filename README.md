@@ -1,8 +1,7 @@
 <div align="center">
 
-# DeepELIC
+# DeepELIC: Deep Encrypted Lossy Image Compression Network via Compressive Sensing Unfolding
 
-**Deep Encrypted Lossy Image Compression Network via Compressive Sensing Unfolding**
 
 [![Paper](https://img.shields.io/badge/Paper-Pattern%20Recognition%202026-0B5394)](https://doi.org/10.1016/j.patcog.2026.114311)
 [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.patcog.2026.114311-1565C0)](https://doi.org/10.1016/j.patcog.2026.114311)
